@@ -12,4 +12,6 @@ public class Util {
     public static final String DESCRIPTION = "description";
     public static final String DATE = "date";
     public static final String LOCATION = "location";
+    public static final String LAT = "latitude";
+    public static final String LNG = "longitude";
 }

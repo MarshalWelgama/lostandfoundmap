@@ -23,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String CREATE_NOTE_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "(" + Util.ITEM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , " + Util.TYPE + " TEXT, " + Util.ITEM_NAME + " TEXT, " + Util.PHONE + " TEXT, " + Util.DESCRIPTION + " TEXT, " + Util.DATE + " TEXT, " + Util.LOCATION + " TEXT" + ")";
+        String CREATE_NOTE_TABLE = "CREATE TABLE " + Util.TABLE_NAME + "(" + Util.ITEM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT , " + Util.TYPE + " TEXT, " + Util.ITEM_NAME + " TEXT, " + Util.PHONE + " TEXT, " + Util.DESCRIPTION + " TEXT, " + Util.DATE + " TEXT, " + Util.LAT + " TEXT, " + Util.LNG + " TEXT, " + Util.LOCATION + " TEXT" + ")";
         sqLiteDatabase.execSQL(CREATE_NOTE_TABLE);
     }
 
@@ -45,6 +45,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(Util.DESCRIPTION, item.getDescription());
         contentValues.put(Util.DATE, item.getDate());
         contentValues.put(Util.LOCATION, item.getLocation());
+        contentValues.put(Util.LAT, item.getLatitude());
+        contentValues.put(Util.LNG, item.getLongitude());
 
 
         long newRowID = db.insert(Util.TABLE_NAME, null, contentValues);
@@ -77,7 +79,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         obj.setPhone(cursor.getString(3));
                         obj.setDescription(cursor.getString(4));
                         obj.setDate(cursor.getString(5));
-                        obj.setLocation(cursor.getString(6));
+                        obj.setLocation(cursor.getString(8));
+                        obj.setLongitude(cursor.getString(7));
+                        obj.setLatitude(cursor.getString(6));
                         list.add(obj);
                     } while (cursor.moveToNext());
                 }

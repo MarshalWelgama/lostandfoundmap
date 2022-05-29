@@ -8,14 +8,18 @@ public class Item {
     private String description;
     private String date;
     private String location;
+    private String longitude;
+    private String latitude;
 
-    public Item(String type, String item_name, String phone, String description, String date, String location) {
+    public Item(String type, String item_name, String phone, String description, String date, String location, String latitude, String longitude) {
         this.type = type;
         this.item_name = item_name;
         this.phone = phone;
         this.description = description;
         this.date = date;
         this.location = location;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public Item() {
@@ -74,5 +78,21 @@ public class Item {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }

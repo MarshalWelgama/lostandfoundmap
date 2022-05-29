@@ -51,6 +51,8 @@ public class ShowAll extends AppCompatActivity {
                 intent.putExtra("description", itemList.get(i).getDescription());
                 intent.putExtra("date", itemList.get(i).getDate());
                 intent.putExtra("location", itemList.get(i).getLocation());
+                intent.putExtra("longitude", itemList.get(i).getLongitude());
+                intent.putExtra("latitude", itemList.get(i).getLatitude());
                 startActivity(intent);
                 finish();
             }

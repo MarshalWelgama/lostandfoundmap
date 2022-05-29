@@ -38,6 +38,8 @@ public class Individual extends AppCompatActivity {
         String intentDate = intent.getStringExtra("date");
         String intentLocation = intent.getStringExtra("location");
 
+
+
         int intentId = intent.getIntExtra("id", 0);
 
         type.setText(intentType);

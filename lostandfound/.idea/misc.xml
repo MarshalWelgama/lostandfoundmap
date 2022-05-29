@@ -5,7 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_individual.xml" value="0.33591777660228594" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2594250030672176" />
-        <entry key="app/src/main/res/layout/activity_newadvert.xml" value="0.30436553955078127" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.17407407407407408" />
+        <entry key="app/src/main/res/layout/activity_newadvert.xml" value="0.26406245457464694" />
         <entry key="app/src/main/res/layout/activity_showall.xml" value="0.1" />
       </map>
     </option>
